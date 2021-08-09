@@ -1,0 +1,61 @@
+{
+  "name": "@marlonapp/marlon-example-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "scripts": {
+    "dev:watch": "vue-cli-service build --target lib ./src/main.ts --watch --mode development",
+    "dev:serve": "nodemon --exec \"http-server dist -c-1\"",
+    "serve": "concurrently \"npm run dev:watch \" \"npm run dev:serve\"",
+    "build": "vue-cli-service build --target lib ./src/main.ts",
+    "postbuild": "tsc -p tsconfig.json --emitDeclarationOnly --declaration --declarationDir ./dist/@types --skipLibCheck",
+    "lint": "vue-cli-service lint"
+  },
+  "main": "./dist/marlon-example-plugin.common.js",
+  "umd": "./dist/marlon-example-plugin.umd.js",
+  "types": "./marlon-example-plugin.d.ts",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.3",
+    "@typescript-eslint/parser": "^4.18.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "concurrently": "^6.2.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.30.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^7.13.0",
+    "http-server": "^13.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.12",
+    "sass-loader": "8.0.2",
+    "typescript": "~4.1.5",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-shell-plugin": "^0.5.0"
+  },
+  "peerDependencies": {
+    "@marlonapp/marlon-lab": "0.0.9",
+    "@marlonapp/marlon-vue": "1.0.7",
+    "axios": "^0.21.1",
+    "donkey-axios-wrapper": "git+https://github.com/donkeycommerce/axios-wrapper.git#master",
+    "pixi.js": "6.0.4",
+    "vue": "2.6.14",
+    "vue-property-decorator": "8.5.0"
+  },
+  "_id": "marlon-vue@1.0.0",
+  "engines": {
+    "node": ">=12"
+  },
+  "readme": "ERROR: No README data found!",
+  "dependencies": {
+    "@types/pixi.js": "^5.0.0"
+  }
+}
