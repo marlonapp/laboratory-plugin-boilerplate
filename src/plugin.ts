@@ -1,21 +1,27 @@
-import { EventEnum, KeyCombo, KeySpecial, Plugin } from '@marlonapp/marlon-lab'
+import { EventEnum, KeyCombo, KeySpecial, Plugin, PluginMeta } from '@marlonapp/marlon-lab'
+import ExampleBody from '@/components/ExampleBody.vue'
+import ExampleHeader from '@/components/ExampleHeader.vue'
 import Vue from 'vue'
-import ExampleHeader from './components/ExampleHeader.vue'
-import ExampleBody from './components/ExampleBody.vue'
 
+/**
+ * ExamplePlugin Class.
+ * This is the base plugin from which developer could start.
+ */
 export default class ExamplePlugin extends Plugin {
-  /** @inheritdoc */
-  description: string = `
-    This is the ExamplePlugin.
-  `
-
-  /** @inheritdoc */
-  name: string = 'example-plugin'
-
   shortcuts: KeyCombo<unknown>[] = []
 
-  canBePaused (): boolean {
-    return false
+  meta: PluginMeta = {
+    authors: [
+      {
+        fullname: 'Marlon',
+        email: 'marlon.workspace@gmail.com'
+      }
+    ],
+    name: 'example-plugin',
+    description: 'This is the ExamplePlugin.',
+    tags: ['example'],
+    version: '0.0.1',
+    visibility: 'public'
   }
 
   constructor () {
@@ -28,6 +34,9 @@ export default class ExamplePlugin extends Plugin {
     this.registerAllListeners()
   }
 
+  /**
+   * Add a service into Drawer.
+   */
   addExampleDrawerService () {
     // Register Vue Component: one for header, one for body.
     Vue.component('marlon-example-header', ExampleHeader)
@@ -46,11 +55,18 @@ export default class ExamplePlugin extends Plugin {
     })
   }
 
+  /**
+   * Register a shortcut.
+   */
   addExampleShortCut () {
     // CMD + 8, CTRL + 8 -> show console for output.
     this.shortcuts.push(new KeyCombo(
       'Digit8', EventEnum.CUSTOM, KeySpecial.SHORTCUTTER, { message: 'Hello' }
     ))
+  }
+
+  canBePaused (): boolean {
+    return false
   }
 
   /**
@@ -60,6 +76,9 @@ export default class ExamplePlugin extends Plugin {
     console.log('Congratulations! Plugin installed.', this)
   }
 
+  /**
+   * Register all listeners.
+   */
   registerAllListeners () {
     const listeners = require.context('./listeners', false, /\.ts$/)
 
