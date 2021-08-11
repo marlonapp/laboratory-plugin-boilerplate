@@ -37,10 +37,14 @@ module.exports = {
       { vue: 'Vue' },
       { 'pixi.js': 'PIXI' },
       { '@marlonapp/marlon-lab': 'MARLON_LAB' },
-      { '@marlonapp/marlon-vue': 'MARLON_VUE' },
+      { '@marlonapp/marlon-vue': 'MARLON_VUE' }
     ]
   },
   chainWebpack: (config) => {
-    //
+    config.module
+      .rule('worker')
+      .test(/\.worker\.ts$/)
+      .use('worker-loader')
+      .loader('worker-loader')
   }
 }
