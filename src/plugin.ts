@@ -80,7 +80,7 @@ export default class ExamplePlugin extends Plugin {
    * Register all listeners.
    */
   registerAllListeners () {
-    const listeners = require.context('./listeners', false, /\.ts$/)
+    const listeners = require.context('@/listeners', false, /\.ts$/)
 
     listeners.keys().forEach(key => {
       // eslint-disable-next-line new-cap

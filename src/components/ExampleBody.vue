@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
 import { Application } from '@marlonapp/marlon-lab'
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class ExampleBody extends Vue {

@@ -1,5 +1,4 @@
-import PluginExample from './plugin'
 import { installPlugin } from '@marlonapp/marlon-lab'
+import PluginExample from '@/plugin'
 
-const examplePlugin = new PluginExample()
-installPlugin(examplePlugin)
+installPlugin(new PluginExample())
