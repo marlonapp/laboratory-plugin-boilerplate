@@ -1,6 +1,7 @@
 import { EventEnum, KeyCombo, KeySpecial, Plugin, PluginMeta } from '@marlonapp/marlon-lab'
 import ExampleBody from '@/components/ExampleBody.vue'
 import ExampleHeader from '@/components/ExampleHeader.vue'
+import meta from './meta'
 import Vue from 'vue'
 
 /**
@@ -10,19 +11,7 @@ import Vue from 'vue'
 export default class ExamplePlugin extends Plugin {
   shortcuts: KeyCombo<unknown>[] = []
 
-  meta: PluginMeta = {
-    authors: [
-      {
-        fullname: 'Marlon',
-        email: 'marlon.workspace@gmail.com'
-      }
-    ],
-    name: 'example-plugin',
-    description: 'This is the ExamplePlugin.',
-    tags: ['example'],
-    version: '0.0.1',
-    visibility: 'public'
-  }
+  meta: PluginMeta = meta
 
   constructor () {
     super()
