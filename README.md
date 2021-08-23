@@ -23,11 +23,11 @@ This boilerplate includes configurations used by Marlon Team.
 
 ## Folder structure
 
-./ src
-    -  / components -> in this folder puts all Vue Component files
-    -  / listeners -> in this folder puts all listeners files: Plugin has default code to load automatically all listeners.
-    - main.ts  -> entry file: include code for auto-installation
-    - plugin.ts -> this file contains main class of your plugin
+- ./ src
+  -  / components -> in this folder puts all Vue Component files
+  -  / listeners -> in this folder puts all listeners files: Plugin has default code to load automatically all listeners.
+  - main.ts  -> entry file: include code for auto-installation
+  - plugin.ts -> this file contains main class of your plugin
 
 ## Development
 
@@ -61,8 +61,8 @@ Weight: ExamplePlugin GZipped -> 14.37 KiB.
 
 ## TODO
 
-- [ ] Install by UI.
+- [x] Install by UI.
 - [ ] Manage maps of events (mouse, keyboard, actions, gestures).
-- [ ] Add tools property to Plugin like shortcuts.
-- [ ] Use string with EventSystem.
+- [x] Add tools property to Plugin like shortcuts.
+- [x] Use string with EventSystem.
 - [ ] Provide more functions for access Application and write on it.
