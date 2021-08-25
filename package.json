@@ -59,8 +59,6 @@
   "dependencies": {
     "@marlonapp/marlon-lab-plugin-loader": "^1.0.0",
     "@types/pixi.js": "^5.0.0",
-    "dedent-js": "^1.0.1",
-    "indent": "^0.0.2",
     "lodash": "^4.17.21"
   }
 }
