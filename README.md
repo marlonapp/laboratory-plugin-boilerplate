@@ -23,6 +23,8 @@ This boilerplate includes configurations used by Marlon Team.
 
 ## Folder structure
 
+__NOTE__: If you use MARLON_AUTOMATIC_REGISTER feature YOU MUST NOT TO REMOVE folders provided by this boilerplate.
+
 - ./ src
   -  / components -> in this folder puts all Vue Component files
   -  / listeners -> in this folder puts all listeners files: Plugin has default code to load automatically all listeners.

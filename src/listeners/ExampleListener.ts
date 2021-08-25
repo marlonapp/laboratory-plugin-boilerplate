@@ -1,4 +1,4 @@
-import { PluginListener, EventEnum, EventData } from '@marlonapp/marlon-lab'
+import { PluginListener, EventData } from '@marlonapp/marlon-lab'
 import ExamplePlugin from '@/plugin'
 
 export default class ExampleListener extends PluginListener<ExamplePlugin> {
@@ -7,9 +7,9 @@ export default class ExampleListener extends PluginListener<ExamplePlugin> {
    *
    * @returns Events
    */
-  getEvents (): EventEnum[] {
+  getEvents (): (MarlonEvent|string)[] {
     return [
-      EventEnum.CUSTOM
+      'click:viewport'
     ]
   }
 

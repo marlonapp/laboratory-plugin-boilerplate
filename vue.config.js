@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const webpack = require('webpack')
 const WebpackShellPlugin = require('webpack-shell-plugin')
-const path = require('path')
 
 module.exports = {
   devServer: {
@@ -46,5 +45,12 @@ module.exports = {
       .test(/\.worker\.ts$/)
       .use('worker-loader')
       .loader('worker-loader')
+
+    config.module
+      .rule('marlon-plugin')
+      .test(/plugin\.ts$/)
+      .use('marlon-loader')
+      .options({ emit: false })
+      .loader('@marlonapp/marlon-lab-plugin-loader')
   }
 }

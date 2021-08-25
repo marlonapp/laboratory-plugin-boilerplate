@@ -1,20 +1,15 @@
 <template>
   <div class="example-body flex-center">
-    <h1>{{ fps }}</h1>
+    <h1>Example Body</h1>
   </div>
 </template>
 
 <script lang="ts">
-import { Application } from '@marlonapp/marlon-lab'
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class ExampleBody extends Vue {
-  ticker = Application.instance.pixi.ticker
-
-  get fps () {
-    return Math.round(this.ticker.FPS)
-  }
+  //
 }
 </script>
 
