@@ -41,7 +41,7 @@
     "vue-template-compiler": "^2.6.11",
     "webpack-shell-plugin": "^0.5.0",
     "worker-loader": "^3.0.8",
-    "@marlonapp/marlon-lab-plugin-loader": "1.0.1"
+    "@marlonapp/marlon-lab-plugin-loader": "1.0.2"
   },
   "peerDependencies": {
     "@marlonapp/marlon-lab": "0.0.19",
