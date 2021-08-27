@@ -36,7 +36,16 @@ module.exports = {
       { vue: 'Vue' },
       { 'pixi.js': 'PIXI' },
       { '@marlonapp/marlon-lab': 'MARLON_LAB' },
-      { '@marlonapp/marlon-vue': 'MARLON_VUE' }
+      { '@marlonapp/marlon-vue': 'MARLON_VUE' },
+      function (context, request, callback) {
+        if (/^@pixi\/(?:.*)$/.test(request)) {
+          // Externalize to a commonjs module using the request path
+          return callback(null, 'PIXI')
+        }
+
+        // Continue without externalizing the import
+        callback()
+      }
     ]
   },
   chainWebpack: (config) => {
