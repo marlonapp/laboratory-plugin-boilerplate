@@ -44,7 +44,7 @@
     "@marlonapp/marlon-lab-plugin-loader": "1.0.2"
   },
   "peerDependencies": {
-    "@marlonapp/marlon-lab": "0.0.20",
+    "@marlonapp/marlon-lab": "0.0.22",
     "@marlonapp/marlon-vue": "1.0.7",
     "axios": "^0.21.1",
     "donkey-axios-wrapper": "git+https://github.com/donkeycommerce/axios-wrapper.git#master",
