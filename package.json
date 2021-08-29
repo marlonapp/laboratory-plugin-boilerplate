@@ -15,7 +15,7 @@
   "umd": "./dist/marlon-example-plugin.umd.js",
   "types": "./marlon-example-plugin.d.ts",
   "devDependencies": {
-    "@marlonapp/marlon-lab-plugin-loader": "1.0.3",
+    "@marlonapp/marlon-lab-plugin-loader": "1.0.4",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~4.5.0",
