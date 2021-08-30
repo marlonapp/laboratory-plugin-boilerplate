@@ -11,7 +11,7 @@ module.exports = {
     extract: false,
     loaderOptions: {
       sass: {
-        prependData: `
+        additionalData: `
           @import "@marlonapp/marlon-vue/src/assets/css/_variables.scss";
           @import "@marlonapp/marlon-vue/src/assets/css/mixins/_index.scss";
         `
