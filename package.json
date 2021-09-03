@@ -49,8 +49,8 @@
     "worker-loader": "^3.0.8"
   },
   "peerDependencies": {
-    "@marlonapp/marlon-lab": "0.0.32",
-    "@marlonapp/marlon-vue": "1.0.7",
+    "@marlonapp/marlon-lab": "0.0.42",
+    "@marlonapp/marlon-vue": "1.0.9",
     "axios": "^0.21.1",
     "donkey-axios-wrapper": "git+https://github.com/donkeycommerce/axios-wrapper.git#master",
     "pixi.js": "6.0.4",
