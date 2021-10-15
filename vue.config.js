@@ -12,8 +12,7 @@ module.exports = {
     loaderOptions: {
       sass: {
         additionalData: `
-          @import "@marlonapp/marlon-vue/src/assets/css/_variables.scss";
-          @import "@marlonapp/marlon-vue/src/assets/css/mixins/_index.scss";
+          @import "@marlonapp/marlon-vue/src/assets/css/additional_data.scss";
         `
       }
     }
